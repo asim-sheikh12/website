@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <form onsubmit="login(event)">
+      <div class="mainbody">
+        <div class="heading">
+          <h1 style="color: indianred">
+            Log <span style="color: #2f3640">in</span>
+          </h1>
+        </div>
+        <div style="margin-top: 10px">
+          <label>Email : </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter email"
+            required
+          /><br /><br />
+          <label>Password :</label>
+          <input
+            type="password"
+            id="pass2"
+            placeholder="Enter Password"
+            required
+          /><br /><br />
+        </div>
+        <input
+          style="margin-top: 10px; background-color: gray"
+          type="submit"
+          value="Login"
+        />
+        <p style="text-align: center">| Create New Account |</p>
+        <input
+          style="margin-top: 10px; background-color: gray"
+          type="button"
+          value="Sign Up"
+          onclick="signupPage()"
+        />
+      </div>
+    </form>
+    <script>
+      function signupPage() {
+        window.open("file:///home/lenovo/Codes/Website%20New/signup.html");
+      }
+    </script>
+    <script src="website.js"></script>
+  </body>
+</html>
