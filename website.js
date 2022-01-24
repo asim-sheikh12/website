@@ -4,8 +4,10 @@ var signUp = (e) => {
   let formData = {
     firstname: document.getElementById("firstname").value,
     lastname: document.getElementById("lastname").value,
+    country: document.getElementById("country").value,
     email: document.getElementById("email").value,
     date: document.getElementById("date").value,
+    contact: document.getElementById("contact").value,
     pw1: document.getElementById("pass1").value,
     pw2: document.getElementById("pass2").value,
   };
@@ -25,6 +27,29 @@ var signUp = (e) => {
       alert(`Hi ${formData.firstname}! You have signed up successfully.`);
     }
   }
+  const data = { firstname: document.getElementById("firstname").value,
+    lastname: document.getElementById("lastname").value,
+    country: document.getElementById("country").value,
+    email: document.getElementById("email").value,
+    date: document.getElementById("date").value,
+    contact: document.getElementById("contact").value,
+    pw1: document.getElementById("pass1").value,
+    pw2: document.getElementById("pass2").value, };
+
+fetch('https://example.com/profile', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
 }
   //Login page:-
 
